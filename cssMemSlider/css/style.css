@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #030303;
+}
+.wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 250px;
+  
+}
+
+.slider-mem {
+    width: 820px;
+    height: 590px;
+    overflow: hidden;
+    border: 5px solid #fff;
+   
+} 
+.layer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.navigation-box {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    z-index: 1;
+}
+
+.dots {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 15px;
+    opacity: 0.5;
+    background-color: olive;
+    transition: all 0.5s ease;
+    
+}
+
+.dots:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+input[name="radio"]{
+    position: absolute;
+    visibility: hidden;
+}
+
+.slide-item { 
+    width: 25%;
+    transition: all 0.8s ease;
+}
+.slide-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slides-mem-items {
+    width: 400%;
+    height: 100%;
+    display: flex;
+}
+
+#r1:checked ~ .s1 {
+    margin-left: 0;
+}
+
+#r2:checked ~ .s1 {
+    margin-left: -25%;
+}
+#r3:checked ~ .s1 {
+    margin-left: -50%;
+}
+#r4:checked ~ .s1 {
+    margin-left: -75%;
+}
