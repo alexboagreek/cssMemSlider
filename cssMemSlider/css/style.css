@@ -5,14 +5,10 @@
 
 body {
     background-color: #030303;
+    margin: 10% auto;
+    display: flex;
+    flex-direction: column;
 }
-/* .wrapper {
-    max-width: 1920px;
-    margin: 0 auto;
-    padding: 0 250px;
-    font-size: 1rem;
-  
-} */
 
 .slider-meme {
     width: 70%;
@@ -23,6 +19,11 @@ body {
     display: flex;
     flex-direction: column;
     margin: 10% auto 1rem;
+}
+.slider-mem-box {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0 0;
 }
 .navigation-box {
     display: flex;
@@ -38,13 +39,15 @@ body {
     cursor: pointer;
     margin-right: 0.75rem;
     opacity: 0.5;
-    background-color: olive;
-    transition: all 0.5s ease;   
+    background-color: blue;
+    transition: all 0.5s ease; 
+    border: 1rem solid #030303;  
 }
 
 .dots:hover {
     opacity: 1;
     transform: scale(1.1);
+    cursor: pointer;
 }
 
 input[name="radio"]{
@@ -70,6 +73,7 @@ input[name="radio"]{
 .title {
     color: #fff;
     font-size: 1.2rem;
+    font-family: 'sans-serif';
     width: 25%;
     transition: all .5s ease;
     opacity: 0;
@@ -81,11 +85,7 @@ input[name="radio"]{
     transition: all .5s ease;
 }
 
-.slider-mem-box {
-    display: flex;
-    flex-direction: row;
-    margin: 1rem 0 0;
-}
+
 
 #r1:checked ~ .slider-meme .slides-mem-items .s1,
 #r1:checked ~ .slider-meme .slider-mem-box .title-meme .l1 {
@@ -93,15 +93,15 @@ input[name="radio"]{
 }
 
 #r2:checked ~ .slider-meme .slides-mem-items .s1,
-#r1:checked ~ .slider-meme .slider-mem-box .title-meme .l1 {
+#r2:checked ~ .slider-meme .slider-mem-box .title-meme .l1 {
     margin-left: -25%;
 }
 #r3:checked ~ .slider-meme .slides-mem-items .s1,
-#r1:checked ~ .slider-meme .slider-mem-box .title-meme .l1 {
+#r3:checked ~ .slider-meme .slider-mem-box .title-meme .l1 {
     margin-left: -50%;
 }
 #r4:checked ~ .slider-meme .slides-mem-items .s1,
-#r1:checked ~ .slider-meme .slider-mem-box .title-meme .l1 {
+#r4:checked ~ .slider-meme .slider-mem-box .title-meme .l1 {
     margin-left: -75%;
 }
 
@@ -109,7 +109,16 @@ input[name="radio"]{
 #r2:checked ~ .slider-meme .slider-mem-box .title-meme .l2,
 #r3:checked ~ .slider-meme .slider-mem-box .title-meme .l3,
 #r4:checked ~ .slider-meme .slider-mem-box .title-meme .l4{
-    opacity: 1;
-    margin-left: 0%;
-  
+    opacity: 1; 
+}
+
+ 
+#r1:checked ~ .slider-meme .slider-meme-box .navigation-box .d1,
+#r2:checked ~ .slider-meme .slider-meme-box .navigation-box .d2,
+#r3:checked ~ .slider-meme .slider-meme-box .navigation-box .d3,
+#r4:checked ~ .slider-meme .slider-meme-box .navigation-box .d4{
+  background-color: #000;
+  border: .3rem solid blue;
+  cursor: unset;
+  margin-top: .7rem;
 }
