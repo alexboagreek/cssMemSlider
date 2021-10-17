@@ -130,7 +130,7 @@ input[name="radio"]{
       font-size: .9rem;
     }
     .dots{
-      border: .5rem solid #000;
+      border: .5rem solid #030303;
       width:.8rem;
       height:.8rem;
     }
@@ -154,7 +154,7 @@ input[name="radio"]{
       align-items: center;
     }
     .dots{
-      border: .3rem solid #000;
+      border: .3rem solid #030303;
     }
     #r1:checked ~ .slider-meme .slider-mem-box .navigation-box .d1, 
     #r2:checked ~ .slider-meme .slider-mem-box .navigation-box .d2, 
